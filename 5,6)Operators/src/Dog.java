@@ -1,11 +1,11 @@
 public class Dog {
     private String name;
     private String says;
-    Dog(){
+    public Dog(){
         name = "name";
         says = "gav";
     }
-    Dog(String name, String says){
+    public Dog(String name, String says){
         this.name = name;
         this.says = says;
     }
