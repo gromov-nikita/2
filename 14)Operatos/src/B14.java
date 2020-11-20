@@ -6,28 +6,36 @@ objects.
  */
 public class B14 {
     void func(String s1,String s2){
-        int sizeS1 = s1.length(),sizeS2 = s2.length();
-        System.out.println("Length s1: " + sizeS1 + "\n" + "Length s2: " + sizeS2 );
-        System.out.println("s1 == s2");
-        System.out.println(s1 == s2);
-        System.out.println("s1 != s2");
-        System.out.println(s1 != s2);
-        System.out.println("s1 equals s2");
-        System.out.println(s1.equals(s2));
-        System.out.println("s1 > s2");
-        System.out.println(sizeS1 > sizeS2);
-        System.out.println("s1 < s2");
-        System.out.println(sizeS1 < sizeS2);
-        System.out.println("s1 >= s2");
-        System.out.println(sizeS1 >= sizeS2);
-        System.out.println("s1 <= s2");
-        System.out.println(sizeS1 <= sizeS2);
-        System.out.println("______________/");
+        if(s1 != null && s2 != null) {
+            int sizeS1 = s1.length(), sizeS2 = s2.length();
+            System.out.println("Length s1: " + sizeS1 + "\n" + "Length s2: " + sizeS2);
+            System.out.println("s1 == s2");
+            System.out.println(s1 == s2);
+            System.out.println("s1 != s2");
+            System.out.println(s1 != s2);
+            System.out.println("s1 equals s2");
+            System.out.println(s1.equals(s2));
+            System.out.println("s1 > s2");
+            System.out.println(sizeS1 > sizeS2);
+            System.out.println("s1 < s2");
+            System.out.println(sizeS1 < sizeS2);
+            System.out.println("s1 >= s2");
+            System.out.println(sizeS1 >= sizeS2);
+            System.out.println("s1 <= s2");
+            System.out.println(sizeS1 <= sizeS2);
+            System.out.println("______________/");
+        }
+        else{
+            System.out.println("func(null)");
+        }
     }
     public static void main(String[] args) {
         B14 obj = new B14();
         obj.func("12345","123");
         obj.func("123","123");
         obj.func("123","12345");
+        obj.func(null,null);
+        obj.func("123",null);
+        obj.func(null,"123");
     }
 }
